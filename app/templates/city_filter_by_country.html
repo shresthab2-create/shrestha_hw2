@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Cities in {{ country_name }}</h1>
+    {% if cities %}
+        <ul>
+        {% for city in cities %}
+            <li>{{ city.name }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cities found.</p>
+    {% endif %}
+{% endblock %}
